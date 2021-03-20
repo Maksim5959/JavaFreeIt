@@ -16,12 +16,8 @@ public class ReverseNumber {
                 int numberInt = Integer.parseInt(number);
                 if (number.length() == 4) {
                     System.out.println("Вы ввели число: " + numberInt);
-                    String reverseNumber = "";
-                    for (int i = 0; i < number.length(); i++) {
-                        reverseNumber = number.charAt(i) + reverseNumber;
-                    }
-                    System.out.println("Число в обратном порядке: " + reverseNumber);
-                    break;
+                    StringBuilder sb = new StringBuilder(number);
+                    System.out.println("Число в обратном порядке: " + sb.reverse());
                 } else {
                     System.out.println("Это не четырехзначное число, попробуйте еще раз: ");
                 }
