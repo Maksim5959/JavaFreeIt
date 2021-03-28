@@ -12,7 +12,7 @@ public class Task11 {
                 divisionCount++;
             }
         }
-        if (divisionCount == 2 || number == 1) {
+        if (divisionCount == 2) {
             System.out.println(number + " - простое число!");
         } else {
             System.out.println(number + " - не является простым числом!");
