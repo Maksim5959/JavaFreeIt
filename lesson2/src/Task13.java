@@ -13,7 +13,7 @@ public class Task13 {
         int countNumbers = sc.nextInt();
         int countNumbersMarker = countNumbers;
         Random rand = new Random();
-        int numbers[] = new int[countNumbers];
+        int [] numbers = new int[countNumbers];
         for (countNumbers = 0; countNumbers < numbers.length; countNumbers++) {
             System.out.println("Введите число, осталось ввести " + "<" + (countNumbersMarker--) + ">");
             numbers[countNumbers] = sc.nextInt();
