@@ -13,7 +13,7 @@ public class Task15 {
         int i;
         System.out.println("Исходный массив: ");
         for (i = 0; i < numbersArray.length; i++) {
-            numbersArray[i] = rand.nextInt(11) + 0;
+            numbersArray[i] = rand.nextInt(11);
             System.out.print(numbersArray[i] + " ");
         }
         int reverse;
