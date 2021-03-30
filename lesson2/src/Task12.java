@@ -11,7 +11,7 @@ public class Task12 {
         int n = sc.nextInt();
         int numberCount = 0;
         int summNumber = 0;
-        for (; ; ) {
+        while (n > 0) {
             System.out.println("Введите целое число: ");
             int number = sc.nextInt();
             if (number % 3 == 0 && number != 0) {
@@ -21,6 +21,7 @@ public class Task12 {
             if (numberCount == n) {
                 break;
             }
+            n--;
         }
         System.out.println("Сумма первых " + n + " чисел, которые делятся на 3 без остатка = " + summNumber);
     }
