@@ -10,23 +10,12 @@ public class Task8 {
     public static void main(String[] args) {
         Random rand = new Random();
         int money = Math.abs(rand.nextInt());
-        switch (money % 10) {
-            case 1:
-                System.out.println(money + " рубль");
-                break;
-            case 2:
-            case 3:
-            case 4:
-                System.out.println(money + " рубля");
-                break;
-            case 0:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-                System.out.println(money + " рублей");
-                break;
+        if (money % 10 == 1 && money % 100 != 11) {
+            System.out.println(money + " рубль");
+        } else if (money % 10 >= 2 && money % 10 <= 4 && (money % 100 < 10 || money % 100 >= 20)) {
+            System.out.println(money + " рубля");
+        } else {
+            System.out.println(money + " рублей");
         }
     }
 }
