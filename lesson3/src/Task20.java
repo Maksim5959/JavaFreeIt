@@ -14,7 +14,7 @@ public class Task20 {
         String endWord = "";
         while (strTok.hasMoreTokens()){
             strWords = strTok.nextToken();
-            endWord += "" + strWords.charAt(strWords.length()-1);
+            endWord += strWords.charAt(strWords.length()-1);
         }
         System.out.println("Слово из последних букв всех слов заданной строки - " + "\"" + endWord + "\"");
     }
