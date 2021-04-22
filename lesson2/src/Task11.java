@@ -3,19 +3,19 @@
  */
 public class Task11 {
     public static void main(String[] args) {
-        int number = 107;
+        int number = 375112621;
         int division;
-        int divisionCount = 0;
-        for (int i = 1; i <= number; i++) {
+        if (number <= 1) {
+            System.out.println(number + " - не является простым числом!");
+            return;
+        }
+        for (int i = 2; i < number; i++) {
             division = number % i;
             if (division == 0) {
-                divisionCount++;
+                System.out.println(number + " - не является простым числом!");
+                return;
             }
         }
-        if (divisionCount == 2) {
-            System.out.println(number + " - простое число!");
-        } else {
-            System.out.println(number + " - не является простым числом!");
-        }
+        System.out.println(number + " - простое число!");
     }
 }
