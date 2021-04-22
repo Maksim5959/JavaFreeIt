@@ -6,7 +6,7 @@ public class Task11 {
         int number = 375112621;
         int division;
         if (number <= 1) {
-            System.out.println(number + " - не является простым числом!");
+            System.out.println(number + " - не является простым числом! ");
             return;
         }
         for (int i = 2; i < number; i++) {
