@@ -12,7 +12,7 @@ public class Task20 {
         int count = strTok.countTokens();
         String strWords = "";
         String endWord = "";
-        for (int i = 0;i < count;i++){
+        while (strTok.hasMoreTokens()){
             strWords = strTok.nextToken();
             endWord += "" + strWords.charAt(strWords.length()-1);
         }
