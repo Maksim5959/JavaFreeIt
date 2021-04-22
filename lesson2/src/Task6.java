@@ -19,14 +19,10 @@ public class Task6 {
             System.out.println("Число " + number + " нечетное! ");
         }
         // Определяем является ли последняя цифра числа семеркой.
-        String numbersStr = "" + number;
-        int lastNumberIndex = numbersStr.length();
-        String lastNumber = "";
-        lastNumber = numbersStr.charAt(lastNumberIndex - 1) + lastNumber;
-        if (lastNumber.equals("7")) {
+        if (number % 10 == 7) {
             System.out.println("Последняя цифра числа " + number + " семерка! ");
         } else {
-            System.out.println("Последняя цифра числа " + number + " = " + lastNumber);
+            System.out.println("Последняя цифра числа " + number + " = " + number % 10);
         }
     }
 }
