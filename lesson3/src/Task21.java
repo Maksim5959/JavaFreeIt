@@ -8,22 +8,27 @@ public class Task21 {
     public static void main(String[] args) {
         String str = "String ";
         String sumStr = "";
-        for(int i = 0; i < 10; i++){
+        long start = System.currentTimeMillis();
+        for(int i = 0; i < 10000; i++){
             sumStr += str;
         }
-        System.out.println("Полученная строка - " + "\"" + sumStr + "\"");
-        System.out.println("Скорость выполнения = 1,598 секунд");
+        long stop = System.currentTimeMillis();
+        System.out.println("Скорость выполнения (Оператор сложения) = " + (stop - start));
+
         StringBuilder strBuild = new StringBuilder();
-        for (int i = 0; i < 10; i++){
+        start = System.currentTimeMillis();
+        for (int i = 0; i < 10000000; i++){
             strBuild.append(str);
         }
-        System.out.println("Полученная строка - " + "\"" + strBuild + "\"");
-        System.out.println("Скорость выполнения = 1,653 секунд");
+        stop = System.currentTimeMillis();
+        System.out.println("Скорость выполнения (StringBuilder) = " + (stop - start));
+
         StringBuffer strBuff = new StringBuffer();
-        for (int i = 0; i < 10; i++){
+        start = System.currentTimeMillis();
+        for (int i = 0; i < 10000000; i++){
             strBuff.append(str);
         }
-        System.out.println("Полученная строка - " + "\"" + strBuff + "\"");
-        System.out.println("Скорость выполнения = 1,708 секунд");
+        stop =  System.currentTimeMillis();
+        System.out.println("Скорость выполнения (StringBuffer) = " + (stop - start));
     }
 }
