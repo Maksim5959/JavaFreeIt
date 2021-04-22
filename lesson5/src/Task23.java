@@ -9,6 +9,6 @@ public class Task23 {
         System.out.println("Исходная строка: ");
         System.out.println(str);
         System.out.println("Cтрока с замененными тегами абзацев: ");
-        System.out.println(str.replaceAll("<p [a-zA-Z=\"0-9]+>","<p>"));
+        System.out.println(str.replaceAll("<p\\s.+?>","<p>"));
     }
 }
