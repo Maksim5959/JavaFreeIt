@@ -2,47 +2,48 @@
  * минимальным и максимальным значениями.
  */
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task16 {
 
     public static void main(String[] args) {
-        // Задаем масив случайных чисел
         Random rand = new Random();
-        int numbersArr[] = new int[10];
-        int i;
-        for (i = 0; i < numbersArr.length; i++) {
-            numbersArr[i] = rand.nextInt(10) + 0;
-            System.out.println(numbersArr[i]);
+        int[] numbersArr = new int[10];
+        for (int i = 0; i < numbersArr.length; i++) {
+            numbersArr[i] = rand.nextInt(10);
         }
-        int minIndex = 0;
-        int minNumber = Integer.MAX_VALUE;
-        for (i = 0; i < numbersArr.length; i++) {
-            if (numbersArr[i] < minNumber) {
-                minNumber = numbersArr[i];
-                minIndex = i;
-            }
-        }
+        System.out.println(Arrays.toString(numbersArr));
+
         int maxNumber = Integer.MIN_VALUE;
         int maxIndex = 0;
-        for (i = 0; i < numbersArr.length; i++) {
+        int minNumber = Integer.MAX_VALUE;
+        int minIndex = 0;
+
+        for (int i = 0; i < numbersArr.length; i++) {
             if (numbersArr[i] > maxNumber) {
                 maxNumber = numbersArr[i];
                 maxIndex = i;
             }
+            if (numbersArr[i] < minNumber) {
+                minNumber = numbersArr[i];
+                minIndex = i;
+            }
+
         }
+
         int sum = 0;
+
         if (minIndex < maxIndex) {
-            for (i = minIndex; i <= maxIndex; i++) {
+            for (int i = minIndex; i <= maxIndex; i++) {
                 sum += numbersArr[i];
             }
-            System.out.println(sum);
-        }
-        if (minIndex > maxIndex) {
-            for (i = maxIndex; i <= minIndex; i++) {
+        } else if (minIndex > maxIndex) {
+            for (int i = maxIndex; i <= minIndex; i++) {
                 sum += numbersArr[i];
             }
-            System.out.println("Сумма элементов массива между минимальным и максимальным элементами включительно = " + sum);
         }
+
+        System.out.println("Сумма элементов массива между минимальным и максимальным элементами включительно = " + sum);
     }
 }
