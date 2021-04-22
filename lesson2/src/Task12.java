@@ -7,22 +7,13 @@ import java.util.Scanner;
 public class Task12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите количество чисел, для которых необходимо вычислить сумму: ");
-        int n = sc.nextInt();
-        int numberCount = 0;
         int summNumber = 0;
-        while (n > 0) {
-            System.out.println("Введите целое число: ");
-            int number = sc.nextInt();
-            if (number % 3 == 0 && number != 0) {
-                summNumber += number;
-                numberCount++;
-            }
-            if (numberCount == n) {
-                break;
-            }
-            n--;
+        System.out.println("Введите количество чисел для которых нужно рассчитать сумму: ");
+        int numberCount = sc.nextInt();
+        for (int i = 3; i <= numberCount * 3 ; i += 3) {
+                summNumber += i;
+
         }
-        System.out.println("Сумма первых " + n + " чисел, которые делятся на 3 без остатка = " + summNumber);
+        System.out.println("Сумма первых " + numberCount + " чисел, которые делятся на 3 без остатка = " + summNumber);
     }
 }
