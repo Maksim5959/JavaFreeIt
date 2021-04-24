@@ -11,7 +11,7 @@ package Task24;
 
 public class TimeRunner {
     public static void main(String[] args) {
-        TimeInterval timeRunnerOne = new TimeInterval(10);
+        TimeInterval timeRunnerOne = new TimeInterval(436536);
         System.out.println("Первый отрезок времени: " + timeRunnerOne.printTime());
         TimeInterval timeRunnerTwo = new TimeInterval(50,50,50);
         System.out.println("Второй отрезок времени: " + timeRunnerTwo.printTime());
