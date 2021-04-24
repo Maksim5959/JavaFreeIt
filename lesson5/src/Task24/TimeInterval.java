@@ -12,9 +12,10 @@ public class TimeInterval {
     }
 
     public TimeInterval(int hours, int minute, int second) {
-        this.second = second;
-        this.minute = minute;
-        this.hours = hours;
+        int secSum = second + minute * 60 + hours * 3600;
+        this.hours = secSum/3600;
+        this.minute = (secSum - this.hours * 3600) /60;
+        this.second = secSum - this.hours * 3600 - this.minute * 60;
     }
 
     public int secondSum() {
